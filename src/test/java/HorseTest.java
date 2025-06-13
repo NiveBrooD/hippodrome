@@ -87,7 +87,7 @@ class HorseTest {
         try (MockedStatic<Horse> horseMockedStatic = Mockito.mockStatic(Horse.class)) {
             horseMockedStatic.when(() -> Horse.getRandomDouble(0.2, 0.9)).thenReturn(randomValue);
             testHorse.move();
-            assertEquals(testHorse.getDistance(), expected);
+            assertEquals(expected, testHorse.getDistance());
         }
     }
 }
