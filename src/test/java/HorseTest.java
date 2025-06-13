@@ -34,7 +34,6 @@ class HorseTest {
     void blankInConstructor(String input) {
         Throwable exception = assertThrows(IllegalArgumentException.class, () -> new Horse(input, 3.0, 20.0));
         assertEquals("Name cannot be blank.", exception.getMessage());
-
     }
 
     @Test
